@@ -1,0 +1,25 @@
+stages:
+  - build
+  - Test
+  - deploy
+
+pull-job:
+  stage : build
+  tags:
+    - "ci"
+  script:
+    - echo -n "***build completed***"
+
+build-job:
+  stage: Test
+  tags:
+    - "ci"
+  script:
+    - echo -n "**Test completed**"
+
+deploy-job:
+  stage: deploy
+  tags:
+    - "ci"
+  script:
+   - echo -n "**deply completed***"

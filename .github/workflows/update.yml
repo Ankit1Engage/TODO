@@ -1,0 +1,10 @@
+stages:
+  - build
+
+build-cicd-testing:
+  stage: build
+  script:
+    mvn package
+  artifacts:
+    paths:
+      - /home/gitlab-runner/
